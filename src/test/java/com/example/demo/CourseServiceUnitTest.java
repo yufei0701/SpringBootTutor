@@ -24,11 +24,11 @@ public class CourseServiceUnitTest {
 
     @Test
     public void testCourseService(){
-        List<Course> courseList = new ArrayList<>();
+        List<Integer> courseList = new ArrayList<>();
 
-        given(courseRepository.findAllClasses()).willReturn(courseList);
+        given(courseRepository.findAllNums()).willReturn(courseList);
 
-        List<Course> result = courseService.findAllCourses();
+        List<Integer> result = courseService.findAllNums();
 
         assertTrue(result.isEmpty());
     }
